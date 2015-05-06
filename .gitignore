@@ -26,3 +26,13 @@
 *.exe
 *.out
 *.app
+
+# VS2010 files
+*.ilk
+*.pdb
+*.ipch
+*.sdf
+*.tlog
+*.opensdf
+
+Debug
