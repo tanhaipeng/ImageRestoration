@@ -1,16 +1,13 @@
 #include <iostream>
 using namespace std;
 
-
-// ÔË¶¯È¥Ä£ºı´úÂëÒÆÖ²
-// matlab->C++
-// author:tanhp
-// date:2015-5-6
-
+// image deblurring(å»æ¨¡ç³Š)
+// author:tanhaipeng
+// date:2015.5.8
 
 int main()
 {
-
+	
 	system("pause");
 	return 0;
 }
