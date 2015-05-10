@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// image deblurring(去模糊)
+// image deblurring (去模糊)
 // author:tanhaipeng
 // date:2015.5.8
 
