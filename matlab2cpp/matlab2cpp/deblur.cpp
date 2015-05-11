@@ -22,12 +22,18 @@ void imresize( Matrix *input,Matrix *&output,double scale)
 	output=new Matrix(nh,nw);
 
 	// 最近邻插值
+	int x,y;
 	for(int i=0;i<nh;i++)
 	{
-		int x=i/scale;
+		x=i/scale;
+		if(x>=input->height)
+			x=input->height-1;
 		for(int j=0;j<nw;j++)
 		{
-			output->data[i][j]=input->data[x][(int)(j/scale)];
+			y=j/scale;
+			if(y>=input->width)
+				y=input->width-1;
+			output->data[i][j]=input->data[x][y];
 		}
 	}
 }
