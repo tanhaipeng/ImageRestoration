@@ -16,4 +16,5 @@ void deblur(Matrix *input,Matrix *&output,int ms,int iter,int psf);
 // input: image
 // simg: resize image
 // scale: 
+
 void imresize(Matrix *input,Matrix *&output,double scale);
