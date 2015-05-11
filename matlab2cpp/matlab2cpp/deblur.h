@@ -24,3 +24,8 @@ void deblur(Matrix *input,Matrix *&output,int ms,int iter,int psf);
 // scale: 
 
 void imresize(Matrix *input,Matrix *&output,double scale);
+
+
+// im2double
+// input: input image
+Matrix* im2double(Matrix *&input);

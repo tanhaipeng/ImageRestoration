@@ -3,19 +3,31 @@
 void deblur(Matrix *input,Matrix *&output,int ms,int iter,int psf )
 {
 	double scale;
-	double Matrix;
+	Matrix *simg=NULL;
+	Matrix *L=NULL;
 	// multi-scale iteration
-	for(int i=0;i<ms;i++)
+	for(int i=1;i<=ms;i++)
 	{
 		scale=1.0/ms; 
-		//imresize(input,simg,scale);				// image resize
+		// imresize(input,simg,scale);				// image resize
+		imresize( input, simg, scale);
 
+		if(i==1)
+		{
+			L=im2double(input);
+		}
+		else
+		{
+
+		}
+
+		delete simg;
 	}
 }
 
 
-void imresize( Matrix *input,Matrix *&output,double scale)
-{
+void imresize( Matrix *input, Matrix *&output, double scale)
+{	
 	// 缩放后大小
 	int nh=input->height*scale+0.5;
 	int nw=input->width*scale+0.5;
@@ -36,4 +48,13 @@ void imresize( Matrix *input,Matrix *&output,double scale)
 			output->data[i][j]=input->data[x][y];
 		}
 	}
+}
+
+Matrix* im2double( Matrix *&input )
+{
+	Matrix *temp=new Matrix(input->height,input->width);
+	for(int i=0;i<input->height;i++)
+		for(int j=0;j<input->width;j++)
+			input->data[i][j]=input->data[i][j]/255.0;
+	return temp;
 }
