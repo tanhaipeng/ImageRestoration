@@ -21,11 +21,9 @@ void deblur(Matrix *input,Matrix *&output,int ms,int iter,int psf )
 		int bk=psf;
 		for(int j=1;j<=iter;j++)
 		{
-			Matrix KK=singleDeblur();
+			Matrix *KK=singleDeblur(simg,L,bk,j);
 
-			// PSF=GrayDeblur(b,l,R,R,j);
 			// l=deconvSps(im2double(b),PSF,0.001,30);
-
 			bk+=2;
 		}
 		delete simg;
