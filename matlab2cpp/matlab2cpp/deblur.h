@@ -1,4 +1,4 @@
-
+#include "memControl.h"
 
 // deblur main function
 // input: blur image
@@ -9,11 +9,11 @@
 // iter: iteration number
 // psf: blur kernel size
 
-void deblur(double **input,double **output,int height,int width,int ms,int iter,int psf);
+void deblur(Matrix *input,Matrix *&output,int ms,int iter,int psf);
 
 
 // image resize main fun
 // input: image
 // simg: resize image
 // scale: 
-void imresize(double **input,double **&simg,double scale);
+void imresize(Matrix *input,Matrix *&output,double scale);

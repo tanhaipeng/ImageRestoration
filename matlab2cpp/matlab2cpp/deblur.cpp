@@ -1,7 +1,6 @@
 #include "deblur.h"
 
-
-void deblur( double **input,double **output,int height,int width,int ms,int iter,int psf )
+void deblur(Matrix *input,Matrix *&output,int ms,int iter,int psf )
 {
 	double scale;
 	double **simg;
@@ -11,12 +10,17 @@ void deblur( double **input,double **output,int height,int width,int ms,int iter
 		scale=1.0/ms; 
 		//imresize(input,simg,scale);				// image resize
 
-
 	}
 }
 
 
-void imresize( double **input,double **&simg,double scale )
+void imresize( Matrix *input,Matrix *&output,double scale )
 {
+	// 缩放后大小
+	int nh=input->height*scale+0.5;
+	int nw=input->width*scale+0.5;
+	output=new Matrix(nh,nw);
+
+	// 插值计算
 
 }

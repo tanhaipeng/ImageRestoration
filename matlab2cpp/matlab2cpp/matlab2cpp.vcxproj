@@ -79,9 +79,11 @@
   <ItemGroup>
     <ClCompile Include="deblur.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="memControl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deblur.h" />
+    <ClInclude Include="memControl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

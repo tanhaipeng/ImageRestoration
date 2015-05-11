@@ -1,5 +1,10 @@
+#ifndef _HEADERNAME_IOSTREAM
+#define _HEADERNAME_IOSTREAM
 #include <iostream>
+#endif
+
 #include "deblur.h"
+
 using namespace std;
 
 // image deblurring (去模糊)
