@@ -24,9 +24,10 @@ void imresize( Matrix *input,Matrix *&output,double scale)
 	// 最近邻插值
 	for(int i=0;i<nh;i++)
 	{
+		int x=i/scale;
 		for(int j=0;j<nw;j++)
 		{
-			output->data[i][j]=input->data[(int)(i/scale)][(int)(j/scale)];
+			output->data[i][j]=input->data[x][(int)(j/scale)];
 		}
 	}
 }
