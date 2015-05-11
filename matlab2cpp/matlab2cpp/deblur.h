@@ -1,3 +1,9 @@
+
+#ifndef _HEADERNAME_IOSTREAM
+#define _HEADERNAME_IOSTREAM
+#include <iostream>
+#endif
+
 #include "memControl.h"
 
 // deblur main function
