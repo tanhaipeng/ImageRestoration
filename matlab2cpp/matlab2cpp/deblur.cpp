@@ -5,6 +5,7 @@ void deblur(Matrix *input,Matrix *&output,int ms,int iter,int psf )
 	double scale;
 	Matrix *simg=NULL;
 	Matrix *L=NULL;
+
 	// multi-scale iteration
 	for(int i=1;i<=ms;i++)
 	{
@@ -13,14 +14,20 @@ void deblur(Matrix *input,Matrix *&output,int ms,int iter,int psf )
 		imresize( input, simg, scale);
 
 		if(i==1)
-		{
 			L=im2double(input);
-		}
 		else
+			imresize( input, L, scale);
+
+		int bk=psf;
+		for(int j=1;j<=iter;j++)
 		{
+			Matrix KK=singleDeblur();
 
+			// PSF=GrayDeblur(b,l,R,R,j);
+			// l=deconvSps(im2double(b),PSF,0.001,30);
+
+			bk+=2;
 		}
-
 		delete simg;
 	}
 }

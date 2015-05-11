@@ -80,10 +80,12 @@
     <ClCompile Include="deblur.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="memControl.cpp" />
+    <ClCompile Include="singleDeblur.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deblur.h" />
     <ClInclude Include="memControl.h" />
+    <ClInclude Include="singleDeblur.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
