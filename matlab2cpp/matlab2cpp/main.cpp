@@ -1,4 +1,5 @@
 #include <iostream>
+#include "deblur.h"
 using namespace std;
 
 // image deblurring (去模糊)
@@ -11,3 +12,4 @@ int main()
 	system("pause");
 	return 0;
 }
+
